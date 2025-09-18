@@ -20,7 +20,7 @@ function Connect-TD {
 $CsvPath = "Path to your CSV file"
 
 # TOPdesk Webhook URL (on TOPdesk test)
-$WebhookURL = "https://uottawa-test.topdesk.net/services/action-v1/api/webhooks/b60f7fd4-673f-4510-84ed-d8c260c605c5"
+$WebhookURL = "https://topdesk.uottawa.ca/services/action-v1/api/webhooks/b60f7fd4-673f-4510-84ed-d8c260c605c5"
 
 $connection = Connect-TD
 
@@ -56,4 +56,5 @@ foreach ($ticket in $tickets) {
     catch {
         Write-Host "Failed for ticket $ticketId. Error: $($_.Exception.Message)"
     }
+
 }
